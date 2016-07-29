@@ -3,12 +3,13 @@
 const MenuItem = React.createClass({
 	getDefaultProps: function() {
 		return {
-			isActive : false
+			isActive : false,
+			url : "#"
 		};
 	},
 	getInitialState: function() {
 		return {
-			isActive: false
+			isActive: this.props.isActive
 		};
 	},
 	handleClick: function(event) {
@@ -25,7 +26,9 @@ const MenuItem = React.createClass({
 			style.fontWeight = "bold";
 		}
 
-		return <li onClick={this.handleClick} style={style}>{this.props.displayName}</li>;
+		return (<li onClick={this.handleClick} style={style}>
+			<a href={this.props.url}>{this.props.displayName}</a>
+			</li>);
 	}
 });
 

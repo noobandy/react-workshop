@@ -1,4 +1,12 @@
 "use strict";
 const Menu = require("./menu");
 
-ReactDOM.render(<Menu/>, document.getElementById('app'));
+let menus = [{
+	displayName: "Home",
+	url: "#home"
+},{
+	displayName: "About",
+	url: "#about"
+}];
+
+ReactDOM.render(<Menu label={"Menu"} menus={menus}/>, document.getElementById('menu'));
