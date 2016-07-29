@@ -2,7 +2,7 @@
 const MenuItem = require("./menu-item");
 
 function Menu() {
-	return <ul> <MenuItem/> <MenuItem/></ul>;
+	return <ul> <MenuItem isActive={true}/> <MenuItem/></ul>;
 }
 
 module.exports = Menu;
